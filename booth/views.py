@@ -7,7 +7,8 @@ def welcome(request):
 
 
 def gallery(request):
-    return render (request, 'categories/all-images.html')
+
+    return render(request, 'categories/all-images.html')
 
 
 def education(request):
@@ -15,5 +16,4 @@ def education(request):
 
 
 def entertainment(request):
-    return render (request, 'categories/ entertainment.html'
-                   )
+    return render (request, 'categories/entertainment.html')
