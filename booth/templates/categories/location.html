@@ -2,5 +2,8 @@
 
 {%block content%}
 {{block.super}}
+{%for location in all_locations%}
+<p>{{location.location}}</p>
+{%endfor%}
 
 {%endblock%}
