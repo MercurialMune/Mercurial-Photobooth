@@ -10,10 +10,13 @@
     <div class="w3-dropdown-content w3-bar-block w3-card">
         {%if all_locations%}
         <form role="filter" class="" action="{%url 'locations'%}">
+            <div class="w3-bar">
         {%for location in all_locations%}
-            <input type="text" name="category" class="ww3-bar-item w3-button w3-hover-red w3-mobile" placeholder="Search Categories" >
-         class="w3-bar-item w3-button w3-hover-red w3-mobile">{{location.location | title}}</label>
+                <input type="submit" name="location" class="w3-bar-item w3-button w3-hover-red w3-mobile" value="{{location.location}}"/>
         {%endfor%}
+            </div>
+            {%endif%}
+        </form>
 
     </div>
   </div>

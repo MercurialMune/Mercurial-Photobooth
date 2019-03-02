@@ -6,7 +6,7 @@ class Category(models.Model):
     category = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.category
 
     def save_editor(self):
         self.save()
@@ -15,7 +15,7 @@ class Location(models.Model):
     location = models.CharField(max_length=30)
 
     def __str__(self):
-        return self.name
+        return self.location
 
 
 class Image(models.Model):
