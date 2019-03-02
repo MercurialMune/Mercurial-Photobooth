@@ -1,10 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+{%extends 'categories/base.html'%}
+
+{%block content%}
+{{block.super}}
+
+<div class="w3-content w3-container w3-padding-64" id="portfolio">
+
+  <h3 class="w3-center">All Images</h3>
+  <p class="w3-center"><em>Check out some of my photos...</em></p><br>
+
+  <div class="w3-row-padding w3-center w3-section">
+      {% if category%}
+      {%for image in category%}
+    <div class="w3-col m3">
+      <img src="{{image.pic.url}}" style="width:100%; min-height:90px" onclick="onClick(this)" class="w3-hover-opacity w3-margin-top w3-card-4" alt="The mist">
+    </div>
+      {%endfor%}
+  </div>
+    {% else %}
+    <div class="w3-half w3-card-4 w3-display-middle w3-padding-large">
+        <h4> Found no images for the category '{{message}}'</h4>
+        <h5 class="w3-left"><b>Hint:</b> search from these categories:
+                            {%for cat in all_categories%}
+            <b>{{cat.category}}</b>,
+                            {%endfor%}...</h5>
+        </div>
+
+    {% endif %}
+
+</div>
+
+
+{%endblock%}
+
+

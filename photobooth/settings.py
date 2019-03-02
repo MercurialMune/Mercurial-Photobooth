@@ -112,7 +112,6 @@ DATABASES = {
         'NAME': 'booth',
         'USER': 'postgres',
     'PASSWORD':'mercurial92',
-    'PASSWORD':'mercurial92',
         'HOST': 'localhost',
     }
 }

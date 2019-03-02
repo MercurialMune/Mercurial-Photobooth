@@ -4,7 +4,6 @@ from . import views
 urlpatterns=[
     url('^$',views.welcome,name = 'welcome'),
     url('^gallery/', views.gallery, name = 'gallery'),
-    url('^education/', views.education, name = 'education'),
-    url('^entertainment/', views.entertainment, name = 'entertainment'),
-
+    url('^locations/', views.locations_filter, name = 'locations'),
+    url(r'^search/', views.search_results, name='search_results')
 ]

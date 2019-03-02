@@ -3,13 +3,16 @@ from django.db import models
 
 # Create your models here.
 class Category(models.Model):
-    name = models.CharField(max_length=30)
+    category = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
 
+    def save_editor(self):
+        self.save()
+
 class Location(models.Model):
-    name = models.CharField(max_length=30)
+    location = models.CharField(max_length=30)
 
     def __str__(self):
         return self.name
@@ -28,6 +31,9 @@ class Image(models.Model):
     def save_photo(self):
         self.save()
 
+    def update_image(self):
+        self.update()
+
     @classmethod
     def get_image_by_id(cls,self):
         image_id = self.id
@@ -35,13 +41,13 @@ class Image(models.Model):
         return this_pic
 
     @classmethod
-    def search_image(cls, category):
-        this_pic = cls.objects.filter(category_filter = category)
-        return this_pic
+    def search_image(cls, parameter):
+        img = cls.objects.filter(category__category__icontains=parameter)
+        return img
 
     @classmethod
     def filter_by_location(cls, location):
-        this_pic = cls.objects.filter(location_filter = location)
+        this_pic = cls.objects.filter(location__contains=location)
         return this_pic
 
 
