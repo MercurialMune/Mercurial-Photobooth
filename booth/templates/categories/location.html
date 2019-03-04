@@ -2,21 +2,30 @@
 
 {%block content%}
 {{block.super}}
-{%for location in all_locations%}
+
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">All Images</h3>
-  <p class="w3-center"><em>Check out some of my photos...</em></p><br>
+  <h3 class="w3-center">Images from {{message | title}}</h3>
+  <p class="w3-center"><em>Check out these photos from {{message | title}}...</em></p><br>
 
   <div class="w3-row-padding w3-center w3-section">
-      {%for image in images%}
+      {%if location%}
+      {%for image in location%}
     <div class="w3-col m3">
       <img src="{{image.pic.url}}" style="width:100%; min-height:90px" onclick="onClick(this)" class="w3-hover-opacity w3-margin-top w3-card-4" alt="The mist">
     </div>
       {%endfor%}
+      {%else%}
+    <div class="w3-half w3-card-4 w3-display-middle w3-padding-large w3-theme-l5">
+        <h4 class="w3-center"> Found no images from '{{message | title}}'</h4>
+        <div class="w3-padding" style="font-size:48px">
+        <i class="far fa-sad-cry"></i>
+        </div>
+        <h5 class="w3-center"> Maybe visit {{message | title}} and take photos yourself</h5>
+        </div>
   </div>
 
 </div>
 
-{%endfor%}
+{%endif%}
 
 {%endblock%}

@@ -25,7 +25,7 @@ def search_results(request):
                        "all_categories": all_categories})
 
     else:
-        message = "You haven't searched for any image category"
+        message = "null"
         return render(request, 'categories/search.html',
                       {"message": message, "all_categories": all_categories, "all_locations": all_locations})
 

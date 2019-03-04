@@ -5,8 +5,8 @@
 
 <div class="w3-content w3-container w3-padding-64" id="portfolio">
 
-  <h3 class="w3-center">All Images</h3>
-  <p class="w3-center"><em>Check out some of my photos...</em></p><br>
+  <h3 class="w3-center">Images from category '{{message}}'</h3>
+  <p class="w3-center"><em>Check out these photos about '{{message}}'...</em></p><br>
 
   <div class="w3-row-padding w3-center w3-section">
       {% if category%}
@@ -19,6 +19,9 @@
     {% else %}
     <div class="w3-half w3-card-4 w3-display-middle w3-padding-large">
         <h4> Found no images for the category '{{message}}'</h4>
+        <div class="w3-padding-xlarge w3-xlarge ">
+        <i class="far fa-sad-cry"></i>
+        </div>
         <h5 class="w3-left"><b>Hint:</b> search from these categories:
                             {%for cat in all_categories%}
             <b>{{cat.category}}</b>,
