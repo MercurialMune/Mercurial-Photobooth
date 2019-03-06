@@ -152,15 +152,6 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
-DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'booth',
-        'USER': 'postgres',
-    'PASSWORD':'mercurial92',
-        'HOST': 'localhost',
-    }
-}
 
 # Configure Django App for Heroku.
 django_heroku.settings(locals())
