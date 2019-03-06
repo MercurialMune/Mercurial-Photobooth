@@ -29,6 +29,11 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+MIDDLEWARE_CLASSES = (
+'whitenoise.middleware.WhiteNoiseMiddleware',
+
+)
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -108,6 +113,9 @@ STATICFILES_DIRS = (
 
 STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
@@ -120,3 +128,8 @@ DATABASES = {
         'HOST': 'localhost',
     }
 }
+
+# Configure Django App for Heroku.
+django_heroku.settings(locals())
+
+
