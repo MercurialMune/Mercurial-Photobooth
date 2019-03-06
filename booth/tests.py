@@ -32,7 +32,7 @@ class ImageTest(TestCase):
     def test_delete_image(self):
         self.img.save_photo()
         less = Image.objects.all().delete()
-        self.assertTrue(len(less) == 0)
+        self.assertTrue(len(less) < 0)
 
     def test_update_image(self):
         self.img.save_photo()

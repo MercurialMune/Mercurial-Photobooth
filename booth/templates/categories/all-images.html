@@ -2,20 +2,48 @@
 
 {%block content%}
 {{block.super}}
+<div class="w3-content w3-display-container w3-padding-64" id="portfolio">
+    <h3 class="w3-center">All Images</h3>
+    <p class="w3-center"><em>Check out some of my photos...</em></p><br>
+    {% block scripts%}
+            <script>
+            function onClick(element) {
+            document.getElementById("lol").src = element.src;
+            document.getElementById("modal01").style.display = "block";
+            }
+            function someCode() {
+              var copyText = document.getElementById("myInput");
+              copyText.select();
+              document.execCommand("copy");
+              document.getElementById("lb").innerHTML="Url copied: " + copyText.value;
 
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
-  <h3 class="w3-center">All Images</h3>
-  <p class="w3-center"><em>Check out some of my photos...</em></p><br>
+            }
+            </script>
+            {%endblock%}
 
-  <div class="w3-row-padding w3-center w3-section">
-      {%for image in images%}
-    <div class="w3-col m3">
+    <div class="w3-row-padding w3-center w3-section">
+        {%for image in images%}
+        <div class="w3-col m3">
       <img src="{{image.pic.url}}" style="width:100%; min-height:90px" onclick="onClick(this)" class="w3-hover-opacity w3-margin-top w3-card-4" alt="The mist">
+
+
+        <div id="modal01" class="w3-modal w3-black w3-display-middle">
+        <span class="w3-button w3-large w3-black w3-display-topright" onclick="document.getElementById('modal01', 'lb').style.display='none'" title="Close Modal Image"><i class="fa fa-remove"></i></span>
+        <div class="w3-modal-content  w3-center w3-transparent w3-padding-64">
+        <img id="lol" class="w3-image w3-margin" >
+
+        <p class="w3-opacity w3-large"> In '{{image.category}}' category</p>
+        <p  class="w3-opacity w3-large"> Image taken in {{image.location}}</p>
+        <input type="text" class="w3-white" value="{{image.pic.url}}" id="myInput" style="display:none"><br>
+        <i class="far fa-clipboard w3-padding" onclick="someCode()"> Copy Image Url </i><br>
+            <p id="lb"></p>
+        </div>
+        </div>
+        </div>
+        {%endfor%}
     </div>
-      {%endfor%}
-  </div>
-
 </div>
-
-
 {%endblock%}
+
+
+

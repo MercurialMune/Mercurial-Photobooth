@@ -3,7 +3,7 @@
 {%block content%}
 {{block.super}}
 
-<div class="w3-content w3-container w3-padding-64" id="portfolio">
+<div class="w3-content w3-display-container w3-padding-64" id="portfolio">
 
   <h3 class="w3-center">Images from category '{{message}}'</h3>
   <p class="w3-center"><em>Check out these photos about '{{message}}'...</em></p><br>
@@ -17,7 +17,7 @@
       {%endfor%}
   </div>
     {% else %}
-    <div class="w3-half w3-card-4 w3-display-middle w3-padding-large">
+    <div class="w3-half w3-card-4 w3-padding-large" style="width:100%; margin-left: auto; margin-right: auto; height: 40%">
         <h4> Found no images for the category '{{message}}'</h4>
         <div class="w3-padding-xlarge w3-xlarge ">
         <i class="far fa-sad-cry"></i>
