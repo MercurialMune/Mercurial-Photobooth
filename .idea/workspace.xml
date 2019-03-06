@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="16d15cd8-96a7-4465-883e-fc0247756d61" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Runtime.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/photobooth/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/photobooth/settings.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -49,7 +49,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Runtime.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state>
@@ -58,14 +58,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/booth/tests.py">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/photobooth/settings.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="45" column="42" selection-start-line="45" selection-start-column="42" selection-end-line="45" selection-end-column="42" />
-              <folding>
-                <element signature="e#0#32#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="314">
+              <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -165,7 +162,6 @@
         <option value="$PROJECT_DIR$/photobooth/admin.py" />
         <option value="$PROJECT_DIR$/booth/admin.py" />
         <option value="$PROJECT_DIR$/photobooth/urls.py" />
-        <option value="$PROJECT_DIR$/photobooth/settings.py" />
         <option value="$PROJECT_DIR$/booth/urls.py" />
         <option value="$PROJECT_DIR$/booth/templates/navbar.html" />
         <option value="$PROJECT_DIR$/booth/models.py" />
@@ -179,6 +175,7 @@
         <option value="$PROJECT_DIR$/booth/templates/categories/all-images.html" />
         <option value="$PROJECT_DIR$/Procfile" />
         <option value="$PROJECT_DIR$/Runtime.txt" />
+        <option value="$PROJECT_DIR$/photobooth/settings.py" />
       </list>
     </option>
   </component>
@@ -202,6 +199,11 @@
             <path>
               <item name="Gallery" type="b2602c69:ProjectViewProjectNode" />
               <item name="Gallery" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="Gallery" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Gallery" type="462c0819:PsiDirectoryNode" />
+              <item name="photobooth" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="Gallery" type="b2602c69:ProjectViewProjectNode" />
@@ -285,9 +287,9 @@
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" sideWeight="0.50078493" side_tool="true" weight="0.2195704" />
-      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49921507" visible="true" weight="0.36953" />
+      <window_info content_ui="combo" id="Project" order="1" sideWeight="0.49921507" weight="0.36953" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.45368916" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.45368916" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.32967034" />
       <window_info anchor="bottom" id="Message" order="3" />
@@ -327,13 +329,6 @@
           <folding>
             <element signature="e#0#40#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/photobooth/settings.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="110" column="13" selection-start-line="110" selection-start-column="12" selection-end-line="110" selection-end-column="13" />
         </state>
       </provider>
     </entry>
@@ -454,6 +449,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state>
           <caret column="12" selection-start-column="12" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/photobooth/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="314">
+          <caret line="106" column="1" selection-start-line="106" selection-start-column="1" selection-end-line="106" selection-end-column="1" />
         </state>
       </provider>
     </entry>
