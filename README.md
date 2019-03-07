@@ -1,4 +1,4 @@
-# Blogit!!
+# Mercurial Photo Booth!!
 
 ### a web app that allows users to view my photos in a gallery format. Users can search for different available categories and filter photos by location
 
